@@ -6,12 +6,16 @@ var check=0;
 
 btn.addEventListener("click",function(){
     if(check==0){
-        istatus.innerHTML = "Friends";
-        istatus.style.color = "green";
-        btn.innerHTML = "Remove Friend";
-        btn.style.backgroundColor="#dadada";
-        btn.style.color="#111";
-        check=1;
+        istatus.innerHTML = "Request Sent!";
+        istatus.style.color = "Gold";
+        btn.innerHTML = "Adding...";
+        setTimeout(function(){
+            istatus.innerHTML = "Friend";
+            istatus.style.color = "Green";
+            btn.innerHTML = "Remove Friend";
+            btn.style.backgroundColor="red";
+            check=1;
+        }, 2000);
     }
     else{
         istatus.innerHTML = "Stranger";
